@@ -6,13 +6,13 @@
 
 int OneExpression::interpret(Context& value)
 {
-    if( value.getContext().front() == 'I')
+    if( value.getContext().front() == expression_)
     {
         auto iter = value.getContext().begin();
-        if( !(iter == value.getContext().end()) && *std::next(iter, 1) != 'I')
-            value.setOutput(value.getOutput() - 1);
+        if(iter != value.getContext().end() && lowerSigns_.find(*std::next(iter, 1)) == std::string::npos)
+            value.setOutput(value.getOutput() - value_);
         else
-            value.setOutput(value.getOutput() + 1);
+            value.setOutput(value.getOutput() + value_);
         std::string tmp = value.getContext().substr(1, std::string::npos);
         value.setContext(tmp);
     }

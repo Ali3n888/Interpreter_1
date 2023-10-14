@@ -13,10 +13,6 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 add_executable(Interpreter
 source/main.cpp
 source/Context.cpp
-source/ThousandExpression.cpp
-source/FivehundredExpression.cpp
-source/HundredExpression.cpp
-source/FiftyExpression.cpp
-source/TenExpression.cpp
 source/FiveExpression.cpp
-source/OneExpression.cpp)
+source/OneExpression.cpp
+source/ExpressionFactory.cpp)
