@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(Interpreter VERSION 0.1.0)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+add_executable(Interpreter
+source/main.cpp
+source/Context.cpp
+source/ThousandExpression.cpp
+source/FivehundredExpression.cpp
+source/HundredExpression.cpp
+source/FiftyExpression.cpp
+source/TenExpression.cpp
+source/FiveExpression.cpp
+source/OneExpression.cpp)
