@@ -5,9 +5,9 @@
 
 int FiveExpression::interpret(Context& value)
 {
-    if( value.getContext().front() == 'V')
+    if( value.getContext().front() == expression_)
     {
-        value.setOutput(value.getOutput() + 5);
+        value.setOutput(value.getOutput() + value_);
         std::string tmp = value.getContext().substr(1, std::string::npos);
         value.setContext(tmp);
     }
